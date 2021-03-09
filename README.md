@@ -9,22 +9,22 @@
 
 
 >ブラウザから操作
-## case03と同じ操作でcase04のリポジトリをフォークする
+## 1.case03と同じ操作でcase04のリポジトリをフォークする
 https://github.com/git-study-session-demo/case04
 (略)
 
-## フォークしたリポジトリをローカルにクーロンして、その中に入る
+## 2.フォークしたリポジトリをローカルにクーロンして、その中に入る
 
 ```bash
 git clone <your repository url> case04
 cd case04
 ```
-### 開発ブランチ01を作成する
+### 3.開発ブランチ01を作成する
 
 ```
 git switch -c feature/case0401
 ```
-## サンプルファイルを追加して、そのファイルをコミットし、プッシュする
+## 4.サンプルファイルを追加して、そのファイルをコミットし、プッシュする
 
 ```
 touch sample.txt
@@ -33,7 +33,7 @@ git add .
 git commit -m 'add sample.txt'
 ```
 
-## sample02.txtとconfig.txt　のサンプルファイルを追加して、そのファイルをコミットする
+## 5.sample02.txtとconfig.txt　のサンプルファイルを追加して、そのファイルをコミットする
 
 ```
 touch sample02.txt
@@ -44,7 +44,7 @@ git add .
 git commit -m 'add sample02 file'
 ```
 
-## config.txt を間違ってコミットしたことをすぐに気付き、そのコミットを「打ち消す」
+## 6.config.txt を間違ってコミットしたことをすぐに気付き、そのコミットを「打ち消す」
 git logコマンドで打ち消したいコミットを確認する。
 
 ```
@@ -62,16 +62,16 @@ git add sample02.txt
 git commit -m 'add sample02 file'
 ```
 
-## 開発ブランチをプッシュする
+## 7.開発ブランチをプッシュする
 
 ```
 git push origin feature/case0401
 ```
-## case01と同様操作で、PRを作成し・マージを行う
+## 8.case01と同様操作で、PRを作成し・マージを行う
 (略)  
 *mainブランチに sample.txtとsample02.txt ファイルは取り込んでいて、そして config.txt は取り込んでいないことを確認*
 
-## ローカルの開発ブランチを削除
+## 9.ローカルの開発ブランチを削除
 
 ```
 git branch -d feature/case0401
